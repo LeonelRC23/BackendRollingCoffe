@@ -1,0 +1,12 @@
+{
+  "name": "14-backendrollincoffe",
+  "version": "1.0.0",
+  "description": "Backend del proyecto rolling coffe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Leonel Cordero",
+  "license": "ISC"
+}
