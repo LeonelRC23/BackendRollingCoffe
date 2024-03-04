@@ -24,3 +24,9 @@ app.use(express.urlencoded({ extended: true })); //Ayuda a interpretar los datos
 //Falta configurar index.html
 
 //3- Configurar las rutas
+
+app.get('/', (req, res) => {
+  console.log('Alguien solicito algo xd');
+  //Falta configurar la respuesta
+  res.send('Respuesta desde nuestro backend de rollingCoffe');
+});
