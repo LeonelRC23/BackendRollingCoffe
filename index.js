@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import productosRouter from './src/controllers/routes/productos.routes.js';
+import './src/database/database.js';
 
 //1- Configurar un puerto
 // puedo compilar el index.js de manera constante usando node --watch en forma experimental
