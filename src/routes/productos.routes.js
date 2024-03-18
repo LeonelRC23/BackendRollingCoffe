@@ -11,7 +11,7 @@ const router = Router();
 
 router.route('/productos').get(listarProductos).post(crearProducto);
 router
-  .route('/producto/:id')
+  .route('/productos/:id')
   .get(obtenerProducto)
   .put(editarProducto)
   .delete(borrarProducto);
