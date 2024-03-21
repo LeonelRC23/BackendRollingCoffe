@@ -6,6 +6,7 @@ import {
   editarProducto,
   borrarProducto,
 } from '../controllers/productos.controllers.js';
+import { check } from 'express-validator';
 
 const router = Router();
 
