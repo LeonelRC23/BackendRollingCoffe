@@ -7,10 +7,14 @@ import {
   borrarProducto,
 } from '../controllers/productos.controllers.js';
 import { check } from 'express-validator';
+import validacionesProducto from '../helpers/validacionProductos.js';
 
 const router = Router();
 
-router.route('/productos').get(listarProductos).post(crearProducto);
+router
+  .route('/productos')
+  .get(listarProductos)
+  .post([validacionesProducto], crearProducto);
 router
   .route('/productos/:id')
   .get(obtenerProducto)

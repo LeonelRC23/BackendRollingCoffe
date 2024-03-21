@@ -1,4 +1,5 @@
 import { check } from 'express-validator';
+import resultadoValidacion from './resultadoValidacion.js';
 
 const validacionesProducto = [
   check('nombreProducto')
@@ -18,4 +19,9 @@ const validacionesProducto = [
         throw new Error('El precio debe estar entre $50 y $10000');
       }
     }),
+  (req, res, next) => {
+    resultadoValidacion(req, res, next);
+  },
 ];
+
+export default validacionesProducto;

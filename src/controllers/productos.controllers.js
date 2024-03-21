@@ -31,14 +31,7 @@ export const obtenerProducto = async (req, res) => {
 export const crearProducto = async (req, res) => {
   try {
     //verificar los datos del body
-    const errors = validationResult(req);
-    console.log(errors.isEmpty());
-    //preguntar si ocurrieron errores
-    if (!errors.isEmpty()) {
-      return res.status(400).json({
-        errores: errors.array(),
-      });
-    }
+
     console.log(req.body);
     //validar los datos
     //pedir a la BD crear el producto
