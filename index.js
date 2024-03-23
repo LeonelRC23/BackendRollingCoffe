@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import productosRouter from './src/routes/productos.routes.js';
 import './src/database/database.js';
+import { routerUsuario } from './src/routes/usuarioRoutes.js';
 
 //1- Configurar un puerto
 // puedo compilar el index.js de manera constante usando node --watch en forma experimental
@@ -39,6 +40,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 //http://localhost:4001/api/nuevo
 app.use('/api', productosRouter);
+app.use('/api', routerUsuario);
 
 // app.get('/nuevo', (req, res) => {
 //   console.log('Alguien solicito algo xd');
